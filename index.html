@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cacti Up</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        background-color: black;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+      }
+      canvas {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game" width="640" height="480"></canvas>
+    <audio id="audio"></audio>
+    <script>
+      var settings = {
+        beatHeight: 48 * 3,
+        gameplayY: 72,
+        passPercent: 60,
+        songs: [
+          {
+            id: '1452',
+            mode: 'HARD'
+          },
+          {
+            id: 'F08',
+            mode: 'HARD'
+          }
+        ],
+        timingWindow: 7 * (5 / 120) * 1000
+      }
+      var screens = {}
+    </script>
+    <script src="./scripts/lifebar.js"></script>
+    <script src="./scripts/receptor.js"></script>
+    <script src="./scripts/step/row.js"></script>
+    <script src="./scripts/step/split.js"></script>
+    <script src="./scripts/step/step.js"></script>
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/transition.js"></script>
+    <script src="./scripts/asset-manager.js"></script>
+    <script src="./scripts/sprite.js"></script>
+    <script src="./scripts/screens/_screen.js"></script>
+    <script src="./scripts/screens/congratulations.js"></script>
+    <script src="./scripts/screens/gameplay.js"></script>
+    <script src="./scripts/screens/game-over.js"></script>
+    <script src="./scripts/screens/how-to-play.js"></script>
+    <script src="./scripts/screens/logo.js"></script>
+    <script src="./scripts/screen-manager.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script>
+      const game = new Game()
+      game.start()
+    </script>
+  </body>
+</html>
